@@ -13,7 +13,7 @@
       :placeholder="`${label}...`"
       :required="required"
       @change="updateValue"
-      class="w-full p-2 rounded-md border border-gray-300 shadow-sm focus:border-blue-300 text-gray-600"
+      class="w-full p-2 rounded-md border border-gray-300 shadow-sm focus:border-blue-300 large"
     />
   </div>
 </template>
