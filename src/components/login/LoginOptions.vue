@@ -7,7 +7,7 @@
         :checked="modelValue"
         @change="updateValue"
       />
-      <label for="remember-login" class="text-gray-400 ml-2"
+      <label for="remember-login" class="text-gray-400 ml-2 cursor-pointer"
         >Remember account?</label
       >
     </div>

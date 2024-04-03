@@ -3,7 +3,7 @@
     :type="type || 'button'"
     :class="`${bgColor || 'bg-blue-600'} ${
       color ? color : 'text-white'
-    } py-2 px-4 rounded-lg ${width || 'w-full'} large`"
+    } py-3 px-4 rounded-3xl ${width || 'w-full'} text-md bg-primary text-neutral-50 `"
   >
     {{ text }}
   </button>
