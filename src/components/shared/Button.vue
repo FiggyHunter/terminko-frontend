@@ -1,11 +1,29 @@
 <template>
   <button
     :type="type || 'button'"
-    :class="`${bgColor || 'bg-blue-600'} ${
-      color ? color : 'text-white'
-    } py-2 px-4 rounded-lg ${width || 'w-full'} large`"
+    :class="
+      `rounded-3xl gap-2 ${
+        color === 'secondary-outline'
+          ? 'bg-white text-primary-900 border-neutral-400 '
+          : color === 'secondary-fill'
+            ? 'bg-secondary-900 text-white border border-white '
+            : color === 'primary-outline'
+              ? 'bg-white text-primary-900 border border-primary-900 '
+              : 'bg-primary text-white '
+      }` +
+      `${
+        size === 'sm'
+          ? 'small border px-5 py-3.5 '
+          : size === 'lg'
+            ? 'large border-2 px-9 py-6 '
+            : size === 'xl'
+              ? 'large border-2 px-14 py-7 '
+              : 'medium border px-6 py-5 '
+      }` +
+      `${width ?? width}`
+    "
   >
-    {{ text }}
+    <slot></slot>
   </button>
 </template>
 
@@ -13,19 +31,17 @@
 defineProps({
   type: {
     type: Object as () => "button" | "submit" | "reset" | undefined,
-    required: true,
   },
-  text: {
-    type: String,
-    required: true,
-  },
-  bgColor: {
-    type: String,
-    required: false,
+  size: {
+    type: Object as () => "sm" | "md" | "lg" | "xl" | undefined,
   },
   color: {
-    type: String,
-    required: false,
+    type: Object as () =>
+      | "primary-fill"
+      | "primary-outline"
+      | "secondary-fill"
+      | "secondary-outline"
+      | undefined,
   },
   width: {
     type: String,
