@@ -1,9 +1,9 @@
 <template>
   <div class="flex flex-col w-screen">
-    <section class="">
-      <slot name="topbar" class="flex flex-row"></slot>
+    <section class="fixed">
+      <slot name="topbar"></slot>
     </section>
-    <section class="mt-2 px-1">
+    <section class="mt-20 px-1">
       <slot name="options"></slot>
       <slot name="items"></slot>
     </section>
