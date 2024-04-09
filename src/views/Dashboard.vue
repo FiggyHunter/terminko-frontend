@@ -1,17 +1,13 @@
 <template>
   <DashBoardLayout>
-    <template #topbar>
-      <div class="flex flex-row justify-center items-center px-1 gap-2">
-        <Sidebar /><SearchBar />
-      </div>
-    </template>
+    <template #topbar> <Sidebar /><SearchBar /> </template>
     <template #options><Filters /></template>
     <template #items>
-      <ol v-for="cv in cvs" :key="cv.id">
-        <li class="w-full">
+      <div class="flex flex-wrap gap-3 justify-center">
+        <div v-for="cv in cvs" :key="cv.id" class="w-5/12">
           <CvCard :title="cv.title" :subtitle="cv.subtitle" />
-        </li>
-      </ol>
+        </div>
+      </div>
     </template>
   </DashBoardLayout>
 </template>

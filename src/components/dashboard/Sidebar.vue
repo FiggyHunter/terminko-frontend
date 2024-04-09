@@ -11,7 +11,8 @@
   <!-- sidebar -->
   <OverlayLayout :isOpen="isSidebarOpen" @overlay-click="isSidebarOpen = false">
     <section
-      class="bg-neutral-50 rounded-3xl rounded-tl-lg w-11/12 p-8 flex flex-col gap-y-8"
+      class="bg-neutral-50 rounded-3xl rounded-tl-lg w-11/12 p-8 flex flex-col gap-y-8 z-50"
+      @click.stop
     >
       <div class="flex flex-row items-center justify-between">
         <div class="flex flex-row gap-3 items-center">
@@ -25,7 +26,14 @@
           </div>
           <h4>Si-Vi</h4>
         </div>
-        <div>L-D</div>
+        <div
+          class="bg-neutral-200 rounded-3xl flex space-between gap-2 py-1 px-2"
+        >
+          <button class="primary-400">
+            <img src="/icons/sun.svg" alt="light mode" />
+          </button>
+          <button><img src="/icons/moon.svg" alt="dark mode" /></button>
+        </div>
       </div>
       <SidebarOptions
         title="Main menu"
@@ -73,5 +81,5 @@ const account = ref([
   { id: 4, name: "Log out", iconPath: "/icons/logout.svg" },
 ]);
 
-const isSidebarOpen = ref(true);
+const isSidebarOpen = ref(false);
 </script>

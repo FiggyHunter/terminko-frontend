@@ -1,6 +1,6 @@
 <template>
   <div class="h-64 flex flex-col items-center gap-4 p-2 border-2 my-2">
-    <img class="bg-black h-40 w-full" src="/login-img.webp" alt="temp" />
+    <img class="bg-black h-40 w-full" src="/CV.png" alt="temp" />
     <div class="flex flex-col gap-2 items-start w-full ml-2">
       <h6>
         {{ title }}

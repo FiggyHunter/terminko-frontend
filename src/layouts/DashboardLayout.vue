@@ -1,14 +1,13 @@
 <template>
   <div class="flex flex-col w-screen">
-    <section class="fixed">
+    <section
+      class="fixed bg-white rounded-b-xl w-full flex flex-row items-center px-3 pt-2 gap-2"
+    >
       <slot name="topbar"></slot>
     </section>
-    <section class="mt-20 px-1">
+    <section class="mt-16 px-1">
       <slot name="options"></slot>
       <slot name="items"></slot>
-    </section>
-    <section class="absolute hidden border-4 border-orange-500 w-full h-screen">
-      <slot name="sidebar"></slot>
     </section>
   </div>
 </template>

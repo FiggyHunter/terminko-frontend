@@ -2,7 +2,7 @@
   <button
     :type="type || 'button'"
     :class="
-      `rounded-3xl gap-2 ${
+      `rounded-3xl gap-2 flex justify-center align-center ${
         color === 'secondary-outline'
           ? 'bg-white text-primary-900 border-neutral-400 '
           : color === 'secondary-fill'
