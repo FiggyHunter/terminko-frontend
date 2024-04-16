@@ -2,7 +2,7 @@
   <div class="flex flex-row md:w-screen md:h-screen pt-4 gap-x-8">
     <Transition name="expand-shrink">
       <div class="flex flex-col md:ml-4 hidden md:block">
-        <slot name="logo"></slot>
+        <slot name="sidebar"></slot>
       </div>
     </Transition>
     <div class="flex flex-col w-screen md:gap-4 md:overflow-y-scroll">
@@ -10,6 +10,9 @@
         class="fixed bg-white rounded-b-xl w-full flex flex-row items-center justify-between px-3 gap-2 md:static md:rounded-none"
       >
         <div class="flex flex-row gap-4 items-center w-full md:w-10/12">
+          <div class="md:hidden">
+            <slot name="logo"></slot>
+          </div>
           <div class="hidden lg:block">
             <slot name="title"></slot>
           </div>

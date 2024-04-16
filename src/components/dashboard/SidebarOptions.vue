@@ -3,7 +3,11 @@
     <h5 class="text-neutral-700 flex align-start">{{ title }}</h5>
     <ul v-for="option in menuOptions" :key="option.id">
       <li
-        :class="`${option.id === selectedOption && 'bg-primary-100 text-primary-900 rounded-3xl rounded-tl-lg'} flex flex-row items-center gap-5 p-3 cursor-pointer `"
+        :class="`${
+          option.id === selectedOption &&
+          'bg-primary-100 text-primary-900 rounded-3xl rounded-tl-lg'
+        } 
+        flex flex-row items-center gap-5 p-3 cursor-pointer h-custom`"
         :onclick="() => emit('option-select', option.id)"
       >
         <div class="w-6 h-6">
@@ -50,3 +54,9 @@ defineProps({
 
 const emit = defineEmits(["option-select"]);
 </script>
+
+<style scoped>
+.h-custom {
+  height: 51px;
+}
+</style>

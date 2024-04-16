@@ -1,6 +1,7 @@
 <template>
   <DashBoardLayout>
-    <template #logo> <Sidebar /> </template>
+    <template #sidebar> <Sidebar /> </template>
+    <template #logo> <LogoButton /> </template>
     <template #title><h1>Dashboard</h1></template>
     <template #search><SearchBar /></template>
     <template #addCvButton>
@@ -26,6 +27,7 @@ import SearchBar from "../components/dashboard/SearchBar.vue";
 import Filters from "../components/dashboard/Filters.vue";
 import Sidebar from "../components/dashboard/Sidebar.vue";
 import CvCard from "../components/dashboard/CvCard.vue";
+import LogoButton from "../components/dashboard/LogoButton.vue";
 import Button from "../components/shared/Button.vue";
 import CircleButton from "../components/shared/CircleButton.vue";
 
