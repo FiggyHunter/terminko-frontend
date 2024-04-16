@@ -126,7 +126,7 @@ body {
 
 h1 {
   font-family: "DM Sans", sans-serif;
-  font-size: 3em;
+  font-size: 3rem;
   line-height: 125%;
   font-weight: 700;
   letter-spacing: -3%;
@@ -134,7 +134,7 @@ h1 {
 
 h2 {
   font-family: "DM Sans", sans-serif;
-  font-size: 2.25em;
+  font-size: 2.25rem;
   line-height: 125%;
   font-weight: 600;
   letter-spacing: -3%;
@@ -142,7 +142,7 @@ h2 {
 
 h3 {
   font-family: "DM Sans", sans-serif;
-  font-size: 1.5em;
+  font-size: 1.5rem;
   line-height: 125%;
   font-weight: 600;
   letter-spacing: -3%;
@@ -150,7 +150,7 @@ h3 {
 
 h4 {
   font-family: "DM Sans", sans-serif;
-  font-size: 1.3125em;
+  font-size: 1.3125rem;
   line-height: 125%;
   font-weight: 600;
   letter-spacing: -3%;
@@ -158,7 +158,7 @@ h4 {
 
 h5 {
   font-family: "DM Sans", sans-serif;
-  font-size: 0.75em;
+  font-size: 0.75rem;
   line-height: 150%;
   font-weight: 600;
   letter-spacing: 5%;
@@ -167,7 +167,7 @@ h5 {
 
 h6 {
   font-family: "DM Sans", sans-serif;
-  font-size: 1.1em;
+  font-size: 1.1rem;
   line-height: 150%;
   font-weight: 500;
   letter-spacing: 0;
@@ -175,25 +175,25 @@ h6 {
 
 p {
   font-family: "Open Sans", sans-serif;
-  font-size: 1.1em;
+  font-size: 1.1rem;
   line-height: 160%;
   font-weight: 500;
   letter-spacing: 0;
 }
 
 p.small {
-  font-size: 1em;
+  font-size: 1rem;
 }
 
 p.xsmall {
-  font-size: 0.875em;
+  font-size: 0.875rem;
   line-height: 150%;
   font-weight: 400;
 }
 
 a {
   font-family: "Open Sans", sans-serif;
-  font-size: 1em;
+  font-size: 1rem;
   line-height: 160%;
   font-weight: 500;
   letter-spacing: 0;
@@ -202,12 +202,12 @@ a {
 }
 
 a.small {
-  font-size: 0.875em;
+  font-size: 0.875rem;
 }
 
 blockquote {
   font-family: "DM Sans", sans-serif;
-  font-size: 1.125em;
+  font-size: 1.125rem;
   line-height: 175%;
   font-weight: 500;
   font-style: italic;
@@ -221,15 +221,15 @@ button {
 }
 
 button.large {
-  font-size: 1.125em;
+  font-size: 1.125rem;
 }
 
 button.medium {
-  font-size: 0.9375em;
+  font-size: 0.9375rem;
 }
 
 button.small {
-  font-size: 0.8125em;
+  font-size: 0.8125rem;
 }
 
 input {
@@ -240,23 +240,23 @@ input {
 }
 
 input.large {
-  font-size: 1.125em;
+  font-size: 1.125rem;
 }
 
 input.medium {
-  font-size: 1em;
+  font-size: 1rem;
 }
 
 input.small {
-  font-size: 0.8725em;
+  font-size: 0.8725rem;
 }
 
 .card {
-  padding: 2em;
+  padding: 2rem;
 }
 
 #app {
-  max-width: 1280px;
+  /* max-width: 1280px; */
   margin: 0 auto;
   text-align: center;
 }

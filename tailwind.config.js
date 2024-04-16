@@ -5,6 +5,18 @@ export default {
   content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      width: {
+        108: "37rem",
+      },
+      borderWidth: {
+        0.5: "0.5px",
+      },
+      borderRadius: {
+        "4xl": "1.75rem",
+      },
+      boxShadow: {
+        xs: "0 2px 12px 1px rgba(20, 20, 43, 0.08)",
+      },
       fontFamily: {
         dm: ["DM Sans"],
         open: ["Open Sans"],

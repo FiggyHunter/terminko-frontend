@@ -1,5 +1,7 @@
 <template>
-  <div class="flex flex-row flex-wrap gap-x-2 gap-y-1 text-neutral-700">
+  <div
+    class="flex flex-row flex-wrap gap-x-2 gap-y-1 mb-2 text-neutral-700 md:mb-0"
+  >
     <ul v-for="filter in filters" :key="filter.id">
       <li>
         <button @click="selected = filter.id">

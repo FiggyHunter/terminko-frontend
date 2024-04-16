@@ -20,7 +20,7 @@
               ? 'large border-2 px-14 py-7 '
               : 'medium border px-6 py-5 '
       }` +
-      `${width ?? width}`
+      `${customStyle ?? customStyle}`
     "
   >
     <slot></slot>
@@ -43,7 +43,7 @@ defineProps({
       | "secondary-outline"
       | undefined,
   },
-  width: {
+  customStyle: {
     type: String,
     required: false,
   },

@@ -13,7 +13,7 @@
         v-model="password"
       />
       <LoginOptions v-model="rememberLogin" />
-      <Button type="submit" width="w-full" size="sm">Log in</Button>
+      <Button type="submit" customStyle="w-full" size="sm">Log in</Button>
     </form>
     <!-- <p class="text-center xsmall my-6">
     Don't have an account?

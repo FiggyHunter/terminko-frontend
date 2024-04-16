@@ -1,14 +1,22 @@
 <template>
   <DashBoardLayout>
-    <template #topbar> <Sidebar /><SearchBar /> </template>
+    <template #logo> <Sidebar /> </template>
+    <template #title><h1>Dashboard</h1></template>
+    <template #search><SearchBar /></template>
+    <template #addCvButton>
+      <Button size="sm" customStyle="max-w-72 flex grow">Generate CV</Button>
+    </template>
     <template #options><Filters /></template>
     <template #items>
-      <div class="flex flex-wrap gap-3 justify-center">
-        <div v-for="cv in cvs" :key="cv.id" class="w-5/12">
+      <div class="flex flex-wrap px-3 gap-2 justify-start md:gap-12">
+        <div v-for="cv in cvs" :key="cv.id" class="flex-grow md:flex-grow-0">
           <CvCard :title="cv.title" :subtitle="cv.subtitle" />
         </div>
       </div>
     </template>
+    <template #addCvCircle>
+      <CircleButton><img src="/icons/plus.svg" alt="add cv" /></CircleButton
+    ></template>
   </DashBoardLayout>
 </template>
 
@@ -18,6 +26,8 @@ import SearchBar from "../components/dashboard/SearchBar.vue";
 import Filters from "../components/dashboard/Filters.vue";
 import Sidebar from "../components/dashboard/Sidebar.vue";
 import CvCard from "../components/dashboard/CvCard.vue";
+import Button from "../components/shared/Button.vue";
+import CircleButton from "../components/shared/CircleButton.vue";
 
 const cvs = [
   {

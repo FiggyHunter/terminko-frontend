@@ -1,7 +1,7 @@
 <template>
   <div
     v-if="isOpen"
-    class="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50"
+    class="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-10"
     @click="emit('overlay-click')"
   >
     <slot></slot>

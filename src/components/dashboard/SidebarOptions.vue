@@ -9,7 +9,7 @@
         <div class="w-6 h-6">
           <img :src="option.iconPath" :alt="option.name" />
         </div>
-        <h6>{{ option.name }}</h6>
+        <h6 v-show="showOptionNames">{{ option.name }}</h6>
       </li>
     </ul>
   </div>
@@ -40,6 +40,10 @@ defineProps({
   },
   selectedOption: {
     value: Number,
+    required: true,
+  },
+  showOptionNames: {
+    value: Boolean,
     required: true,
   },
 });
