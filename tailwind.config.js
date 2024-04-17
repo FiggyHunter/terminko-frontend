@@ -13,6 +13,8 @@ export default {
       },
       borderRadius: {
         "4xl": "1.75rem",
+        "5xl": "2rem",
+        "6xl": "2.25rem",
       },
       boxShadow: {
         xs: "0 2px 12px 1px rgba(20, 20, 43, 0.08)",

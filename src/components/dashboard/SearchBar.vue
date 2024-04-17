@@ -11,7 +11,7 @@
       class="medium block w-full pl-3 bg-primary-50 outline-none"
       placeholder="Search..."
     />
-    <Button size="sm" customStyle="hidden xl:block">Search</Button>
+    <Button size="sm" customStyle="hidden lg:block">Search</Button>
   </div>
 </template>
 

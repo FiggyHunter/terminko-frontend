@@ -1,11 +1,15 @@
 <template>
   <DashBoardLayout>
-    <template #sidebar> <Sidebar /> </template>
-    <template #logo> <LogoButton /> </template>
+    <template #sidebar> <Sidebar :showSidebar="showSidebar" /> </template>
+    <template #logo>
+      <LogoButton @click.native="showSidebar = true" />
+    </template>
     <template #title><h1>Dashboard</h1></template>
     <template #search><SearchBar /></template>
     <template #addCvButton>
-      <Button size="sm" customStyle="max-w-72 flex grow">Generate CV</Button>
+      <Button size="sm" customStyle="max-w-72 overflow-hidden whitespace-nowrap"
+        >Generate CV</Button
+      >
     </template>
     <template #options><Filters /></template>
     <template #items>
@@ -22,6 +26,8 @@
 </template>
 
 <script setup lang="ts">
+import { ref } from "vue";
+
 import DashBoardLayout from "../layouts/DashboardLayout.vue";
 import SearchBar from "../components/dashboard/SearchBar.vue";
 import Filters from "../components/dashboard/Filters.vue";
@@ -30,6 +36,8 @@ import CvCard from "../components/dashboard/CvCard.vue";
 import LogoButton from "../components/dashboard/LogoButton.vue";
 import Button from "../components/shared/Button.vue";
 import CircleButton from "../components/shared/CircleButton.vue";
+
+const showSidebar = ref(false);
 
 const cvs = [
   {

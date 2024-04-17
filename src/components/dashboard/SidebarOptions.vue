@@ -11,7 +11,7 @@
         :onclick="() => emit('option-select', option.id)"
       >
         <img
-          :src="option.iconPath"
+          :src="`${option.id === selectedOption ? option.iconOrange : option.iconBlack}`"
           :alt="option.name"
           class="w-auto h-6 block"
         />
@@ -27,7 +27,8 @@
 interface MenuOption {
   id: number;
   name: string;
-  iconPath: string;
+  iconBlack: string;
+  iconOrange: string;
   action?: () => void;
 }
 
@@ -42,8 +43,18 @@ defineProps({
     // added default to avoid pointless error message, does not effect code
     // since menuOptions is required
     default: () => [
-      { id: 1, name: "Option 1", iconPath: "path/to/icon" },
-      { id: 2, name: "Option 2", iconPath: "path/to/icon" },
+      {
+        id: 1,
+        name: "Option 1",
+        iconBlack: "path/to/icon",
+        iconOrange: "path/to/icon",
+      },
+      {
+        id: 2,
+        name: "Option 2",
+        iconBlack: "path/to/icon",
+        iconOrange: "path/to/icon",
+      },
     ],
   },
   selectedOption: {

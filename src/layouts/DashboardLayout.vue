@@ -1,13 +1,13 @@
 <template>
   <div class="flex flex-row md:w-screen md:h-screen pt-4 gap-x-8">
-    <Transition name="expand-shrink">
-      <div class="flex flex-col md:ml-4 hidden md:block">
-        <slot name="sidebar"></slot>
-      </div>
-    </Transition>
+    <div
+      class="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 md:static md:translate-x-0 md:translate-y-0 md:ml-4"
+    >
+      <slot name="sidebar"></slot>
+    </div>
     <div class="flex flex-col w-screen md:gap-4 md:overflow-y-scroll">
       <section
-        class="fixed bg-white rounded-b-xl w-full flex flex-row items-center justify-between px-3 gap-2 md:static md:rounded-none"
+        class="fixed flex flex-row items-center justify-between w-full bg-white rounded-b-xl px-3 gap-2 md:static md:rounded-none"
       >
         <div class="flex flex-row gap-4 items-center w-full md:w-10/12">
           <div class="md:hidden">
@@ -36,45 +36,3 @@
     </div>
   </div>
 </template>
-
-<style scoped>
-.expand-shrink-enter-active,
-.expand-shrink-leave-active,
-.expand-shrink-enter-from,
-.expand-shrink-leave-to {
-  transform-origin: left;
-}
-.expand-shrink-enter {
-  transform: scaleX(0);
-}
-
-.expand-shrink-leave-to {
-  transform: scaleX(0);
-}
-
-@keyframes expand {
-  0% {
-    transform: scaleX(0);
-  }
-  100% {
-    transform: scaleX(1);
-  }
-}
-
-@keyframes shrink {
-  0% {
-    transform: scaleX(1);
-  }
-  100% {
-    transform: scaleX(0);
-  }
-}
-
-.expand-shrink-enter-active {
-  animation: expand 0.5s forwards;
-}
-
-.expand-shrink-leave-active {
-  animation: shrink 0.5s forwards;
-}
-</style>
