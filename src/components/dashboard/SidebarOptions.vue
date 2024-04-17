@@ -7,13 +7,17 @@
           option.id === selectedOption &&
           'bg-primary-100 text-primary-900 rounded-3xl rounded-tl-lg'
         } 
-        flex flex-row items-center gap-5 p-3 cursor-pointer h-custom`"
+        flex flex-row items-center gap-5 p-3 cursor-pointer leading normal h-custom`"
         :onclick="() => emit('option-select', option.id)"
       >
-        <div class="w-6 h-6">
-          <img :src="option.iconPath" :alt="option.name" />
-        </div>
-        <h6 v-show="showOptionNames">{{ option.name }}</h6>
+        <img
+          :src="option.iconPath"
+          :alt="option.name"
+          class="w-auto h-6 block"
+        />
+        <h6 v-show="showOptionNames" class="overflow-hidden whitespace-nowrap">
+          {{ option.name }}
+        </h6>
       </li>
     </ul>
   </div>

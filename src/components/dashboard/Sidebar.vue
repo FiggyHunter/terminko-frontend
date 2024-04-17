@@ -8,14 +8,16 @@
     <div class="flex flex-row items-center justify-center">
       <div class="flex flex-row gap-2 items-center">
         <div>
-          <img src="/icons/app-logo.svg" alt="app logo" />
+          <img src="/icons/app-logo.svg" alt="app logo" class="w-8 h-4" />
           <img
             src="/icons/app-logo.svg"
             alt="app logo"
-            class="transform -scale-x-100 mt-0.5"
+            class="transform -scale-x-100 mt-0.5 w-8 h-4"
           />
         </div>
-        <h4 v-show="showOptionNames">Si-Vi</h4>
+        <h4 v-show="showOptionNames" class="overflow-hidden whitespace-nowrap">
+          Si-Vi
+        </h4>
       </div>
       <!-- Light and dark mode -->
       <!-- <div
@@ -42,7 +44,12 @@
       :showOptionNames="showOptionNames"
     />
     <div class="flex flex-row items-center justify-center gap-6 h-custom">
-      <p class="small" v-show="showOptionNames">powered by</p>
+      <p
+        class="small overflow-hidden whitespace-nowrap"
+        v-show="showOptionNames"
+      >
+        powered by
+      </p>
       <img src="/icons/skim-logo-full.svg" alt="logo" />
     </div>
     <div class="flex items-center justify-center">
@@ -88,7 +95,7 @@ const account = ref([
 }
 
 .expanded {
-  width: 236px;
+  width: 237px;
 }
 
 .collapsed {
