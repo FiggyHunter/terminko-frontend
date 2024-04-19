@@ -8,6 +8,9 @@ export default {
       width: {
         108: "37rem",
       },
+      height: {
+        6.5: "1.625rem",
+      },
       borderWidth: {
         0.5: "0.5px",
       },
