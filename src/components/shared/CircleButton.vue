@@ -2,7 +2,7 @@
   <button
     :type="type || 'button'"
     :class="
-      `rounded-full flex justify-center align-center p-3 ${
+      `rounded-full flex justify-center items-center p-3 ${
         color === 'light-outline'
           ? 'bg-white text-primary-900 border border-primary-100 '
           : color === 'normal-outline'

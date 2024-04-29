@@ -5,8 +5,8 @@
     </h1>
     <h6 class="text-neutral-900 font-bold mb-4">FOR THE SKIM TEAM</h6>
     <form @submit.prevent="handleLogin" class="w-full">
-      <InputField label="Email" type="email" v-model="email" />
-      <InputField
+      <LoginInputField label="Email" type="email" v-model="email" />
+      <LoginInputField
         input-type="password"
         type="text"
         label="Password"
@@ -30,7 +30,7 @@
 import { ref } from "vue";
 import LoginOptions from "./LoginOptions.vue";
 // import SignUpForm from "../signup/SignUpForm.vue";
-import InputField from "../shared/InputField.vue";
+import LoginInputField from "./LoginInputField.vue";
 import Button from "../shared/Button.vue";
 import auth from "../../api/auth/index";
 
