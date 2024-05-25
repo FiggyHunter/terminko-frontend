@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="22" height="21" fill="none">
+  <g clip-path="url(#a)">
+    <g filter="url(#b)">
+      <circle cx="11" cy="10.5" r="10.5" fill="#FAFAFA" transform="rotate(180 11 10.5)" />
+    </g>
+    <g stroke="#212121" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+      clip-path="url(#c)">
+      <path d="m10.962 14.28 3.517-3.518-3.517-3.516M14.478 10.762h-7.48" />
+    </g>
+  </g>
+  <rect width="20.5" height="20.5" x="21.25" y="20.75" stroke="#E0E0E0" stroke-width=".5" rx="10.25"
+    transform="rotate(180 21.25 20.75)" />
+  <defs>
+    <clipPath id="a">
+      <rect width="21" height="21" x="21.5" y="21" fill="#fff" rx="10.5"
+        transform="rotate(180 21.5 21)" />
+    </clipPath>
+    <clipPath id="c">
+      <path fill="#fff" d="M15.725 15.75H5.75V5.775h9.975z" />
+    </clipPath>
+    <filter id="b" width="79" height="79" x="-28.5" y="-21" color-interpolation-filters="sRGB"
+      filterUnits="userSpaceOnUse">
+      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+      <feColorMatrix in="SourceAlpha" result="hardAlpha"
+        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+      <feMorphology in="SourceAlpha" operator="dilate" radius="1"
+        result="effect1_dropShadow_15_4271" />
+      <feOffset dy="8" />
+      <feGaussianBlur stdDeviation="14" />
+      <feComposite in2="hardAlpha" operator="out" />
+      <feColorMatrix values="0 0 0 0 0.0784314 0 0 0 0 0.0784314 0 0 0 0 0.168627 0 0 0 0.1 0" />
+      <feBlend in2="BackgroundImageFix" result="effect1_dropShadow_15_4271" />
+      <feBlend in="SourceGraphic" in2="effect1_dropShadow_15_4271" result="shape" />
+    </filter>
+  </defs>
+</svg>
